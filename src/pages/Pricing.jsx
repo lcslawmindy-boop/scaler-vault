@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CheckCircle2, Lock, Shield, Zap, Package, ArrowRight, Users, Star } from 'lucide-react';
+import { CheckCircle2, Lock, Shield, Zap, Package, ArrowRight, Users, Star, BookOpen } from 'lucide-react';
 import { base44 } from '@/api/base44Client';
 
 const PLANS = [
@@ -13,17 +13,17 @@ const PLANS = [
     name: 'Starter',
     price: 49,
     period: '/month',
-    description: 'Access to 15 build references and core documentation.',
-    cta: 'Start Building',
+    description: 'Learn core systems. Build with guidance.',
+    cta: 'Start Learning',
     highlighted: false,
     features: [
-      'Access to 15 build references (rotating)',
-      'Full schematics & verified BOMs',
-      'Step-by-step execution guides',
+      '12 core courses — limited selection',
+      '15 build systems (rotating)',
+      'Verified BOMs & schematics',
+      'Execution frameworks',
       'Code & firmware downloads',
-      'AI Engineering Assistant (20 queries/day)',
+      'AI Assistant (20 queries/day)',
       'Community forum access',
-      'New build every Friday (1-week delay)',
     ],
   },
   {
@@ -31,19 +31,19 @@ const PLANS = [
     name: 'Pro',
     price: 99,
     period: '/month',
-    description: 'Full library access with early releases and priority support.',
-    cta: 'Access the Library',
+    description: 'Master advanced systems. Build like a pro.',
+    cta: 'Unlock Full Access',
     highlighted: true,
     badge: 'Most Popular',
     features: [
-      'Full vault — all 47 builds, always',
-      'Early access to new builds (48hr)',
-      'Full schematics, BOMs, supplier links',
-      'All code, firmware & CAD files',
-      'AI Engineering Assistant (unlimited)',
-      '20% discount on all starter kits',
-      'Monthly build livestream',
-      'Priority support (24hr response)',
+      '26 complete courses — full library',
+      'All 29+ build systems, always',
+      'Early access to new courses (48hr)',
+      'Complete execution frameworks',
+      'All schematics, BOMs, CAD files',
+      'Weekly new courses & builds',
+      'AI Assistant (unlimited)',
+      'Priority support (24hr)',
     ],
   },
   {
@@ -51,38 +51,38 @@ const PLANS = [
     name: 'Elite',
     price: 199,
     period: '/month',
-    description: 'Full library plus 1-on-1 mentorship and custom build reviews.',
-    cta: 'Go Elite',
+    description: 'Deep mastery. 1-on-1 guidance. Advanced systems.',
+    cta: 'Join Elite',
     highlighted: false,
     features: [
       'Everything in Pro',
-      '2x monthly 1-on-1 sessions (60 min)',
-      'Custom build consultation',
-      'Elite cohort — private Slack',
-      'Revenue share on published builds',
+      '2x monthly 1-on-1 mentorship (60 min)',
+      'Custom course paths',
+      'Advanced systems cohort',
+      'Revenue share on published work',
       'Early access to high-ticket programs',
       'Free starter kit per quarter',
-      '48hr custom circuit review',
+      'Personal architecture review',
     ],
   },
 ];
 
 const ONE_TIME = [
   {
-    name: 'Individual Plan',
-    price: 497,
-    description: 'Single build complete documentation package.',
-    features: ['80-page build guide (PDF)', 'Full schematics (KiCad + PDF)', 'Verified BOM — 3 supplier options', 'Full codebase (GitHub)', 'Lifetime updates'],
-    cta: 'Buy Guide',
+    name: 'Single Course',
+    price: 397,
+    description: 'Structured learning system with execution framework.',
+    features: ['One complete course (5-8 modules)', 'Full course videos & materials', 'Related build systems access', 'Complete execution framework', 'Lifetime access'],
+    cta: 'Buy Course',
     color: 'border-chart-3/30 bg-chart-3/5',
     badge: 'One-Time',
   },
   {
-    name: 'Advanced Plan',
-    price: 997,
-    description: 'Advanced build with professional documentation and consulting session.',
-    features: ['Everything in Individual', '90-min consulting session included', 'Custom BOM for your use case', 'PCB design review', 'Priority email support (30 days)'],
-    cta: 'Buy Advanced',
+    name: 'Bundle (6 Courses)',
+    price: 1497,
+    description: 'Master a domain with a complete course bundle plus all builds.',
+    features: ['6 related courses (advanced track)', 'All builds in the vault', 'Complete execution systems', 'Comprehensive learning path', 'Lifetime updates'],
+    cta: 'Get Bundle',
     color: 'border-accent/30 bg-accent/5',
     badge: 'Best Value',
   },
@@ -166,10 +166,10 @@ export default function Pricing() {
               30-day money-back guarantee
             </Badge>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-4">
-              Reference Access <span className="text-primary">Plans</span>
+              Choose Your Builder <span className="text-primary">Access</span>
             </h1>
             <p className="text-muted-foreground max-w-xl mx-auto text-lg">
-              Full library access, or buy a single guide. Engineers cancel when projects end — that's fine.
+              Learn structured systems and build real prototypes. Most people stay at the surface level. Builders go deeper.
             </p>
           </motion.div>
         </div>
@@ -206,7 +206,7 @@ export default function Pricing() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="border-t border-border/40 relative">
           <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-background px-4">
-            <span className="text-xs font-medium text-muted-foreground uppercase tracking-widest">Or buy a single guide</span>
+            <span className="text-xs font-medium text-muted-foreground uppercase tracking-widest">Or buy individual courses</span>
           </div>
         </div>
       </div>
@@ -242,9 +242,9 @@ export default function Pricing() {
                     </div>
                   ))}
                 </div>
-                <Link to="/vault">
+                <Link to="/courses">
                   <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-bold h-11 gap-2">
-                    <Package className="w-4 h-4" />
+                    <BookOpen className="w-4 h-4" />
                     {plan.cta}
                   </Button>
                 </Link>

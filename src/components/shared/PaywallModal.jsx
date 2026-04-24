@@ -13,24 +13,24 @@ import { base44 } from '@/api/base44Client';
 // ─── A/B Headline Variants ───────────────────────────────────────────────────
 const HEADLINES = [
   {
-    headline: "Full Documentation Is Available to Members",
-    sub: "Complete schematics, verified BOMs, and tested assembly sequences — unlocked with a membership.",
+    headline: "You're Only Seeing the Preview",
+    sub: "Full courses and complete build systems unlock with membership. Learn the framework. Apply it immediately.",
   },
   {
-    headline: "The Preview Ends Here. Full Docs Begin Inside.",
-    sub: "Every build reference includes complete schematics, sourced BOMs, and step-by-step assembly guidance.",
+    headline: "This System Has a Complete Course Path",
+    sub: "Structured learning modules + full build frameworks — everything you need to understand AND execute.",
   },
   {
-    headline: "This Build Has a Complete Reference Guide",
-    sub: "Verified BOM, full schematics, and tested execution sequences — accessible with Pro membership.",
+    headline: "Most Builders Never Go This Deep",
+    sub: "Full courses, complete systems, verified BOMs, execution frameworks — access the full learning path.",
   },
   {
-    headline: "Skip 40 Hours of Research",
-    sub: "Full component documentation, sourcing links, and assembly sequences — all in one reference.",
+    headline: "Learn the System. Build the Prototype.",
+    sub: "Unlock the full course library and build vault. Everything from theory to execution.",
   },
   {
-    headline: "Built for Engineers Who Actually Prototype",
-    sub: "Implementation-level documentation that goes beyond tutorials: failure modes, tolerances, integration tradeoffs.",
+    headline: "20% Knowledge Isn't Enough",
+    sub: "Members access 26 structured courses plus complete build systems with verified execution paths.",
   },
 ];
 
@@ -47,15 +47,15 @@ const VALUE_BULLETS = [
 const OBJECTIONS = [
   {
     q: "Is this really worth $99/mo?",
-    a: "One build here saves 40+ hours of research and $300+ in failed sourcing mistakes. Members recoup it on the first project.",
+    a: "One course saves 20+ hours of fragmented research. One build saves $300+ in failed sourcing. Members recoup it on the first project.",
   },
   {
     q: "What if I'm not an expert?",
-    a: "Every build is written for implementation, not academia. If you can follow a recipe, you can follow these guides.",
+    a: "Every course is written for execution, not academia. These are structured learning systems for building, not textbooks.",
   },
   {
     q: "Can I cancel anytime?",
-    a: "Yes — cancel from your dashboard in under 30 seconds. No emails, no retention calls.",
+    a: "Yes — cancel from your dashboard instantly. No emails, no retention calls, no questions asked.",
   },
 ];
 
@@ -138,7 +138,7 @@ export default function PaywallModal({ open, onOpenChange }) {
           <div className="flex items-center justify-center gap-2 px-4 py-2 bg-primary/10 border-b border-primary/20">
             <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
             <span className="text-xs font-medium text-primary">
-              {viewers} engineers viewing this build right now
+              {viewers} engineers learning this system right now
             </span>
           </div>
         )}
@@ -202,8 +202,8 @@ export default function PaywallModal({ open, onOpenChange }) {
           {/* Primary CTA */}
           <Link to="/pricing" onClick={() => { handleCTAClick('primary'); onOpenChange(false); }}>
             <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 glow-cyan font-bold h-12 text-sm gap-2 group">
-              <Zap className="w-4 h-4" />
-              Unlock the Full Build — $99/mo
+              <Lock className="w-4 h-4" />
+              Unlock Full Access — $99/mo
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </Button>
           </Link>
@@ -232,8 +232,8 @@ export default function PaywallModal({ open, onOpenChange }) {
           <div className="flex items-center justify-center gap-2 p-3 rounded-xl bg-primary/5 border border-primary/15">
             <Clock className="w-3.5 h-3.5 text-primary flex-shrink-0" />
             <span className="text-xs text-foreground/70">
-              <span className="font-semibold text-primary">New build ships Friday.</span>{' '}
-              Members get early access 48 hrs before public preview.
+             <span className="font-semibold text-primary">New course launches Monday.</span>{' '}
+             Members get early access to the full structured framework.
             </span>
           </div>
         </div>

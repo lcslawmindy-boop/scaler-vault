@@ -51,12 +51,12 @@ export default function HeroSection() {
             </Badge>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.0] tracking-tight mb-6">
-              Build Advanced<br />Engineering Systems<br />
-              <span className="text-primary">Most People Never See</span>
+              Learn Advanced Systems.<br />
+              <span className="text-primary">Build Real Prototypes.</span>
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-lg mb-8 leading-relaxed">
-              Access complete build frameworks, BOMs, prototype systems, and a <strong className="text-foreground">26-course advanced research library</strong> inside a private vault.
+              Access 26 structured courses plus a full build vault with BOMs, execution frameworks, and real prototype systems. Learn the concepts. Apply them immediately.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-4 mb-10">
@@ -84,9 +84,9 @@ export default function HeroSection() {
             {/* Trust signals */}
             <div className="flex flex-wrap gap-6">
               {[
-                { value: '26', label: 'Research Courses' },
+                { value: '26', label: 'Structured Courses' },
                 { value: '29+', label: 'Build Systems' },
-                { value: 'Weekly', label: 'New Content' },
+                { value: '1,200+', label: 'Active Builders' },
               ].map((s, i) => (
                 <div key={i} className="text-center">
                   <div className="text-2xl font-bold text-primary">{s.value}</div>

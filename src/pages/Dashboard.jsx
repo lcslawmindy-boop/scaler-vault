@@ -195,9 +195,9 @@ export default function Dashboard() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Stats */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+          <StatCard icon={BookOpen} label="Courses Learning" value={enrolledCourses.length} color="text-accent" />
           <StatCard icon={Unlock} label="Unlocked Builds" value={unlockedBuilds.length} color="text-primary" />
-          <StatCard icon={BookOpen} label="Enrolled Courses" value={enrolledCourses.length} color="text-accent" />
-          <StatCard icon={ShoppingCart} label="Purchases" value={purchases.length} color="text-chart-3" />
+          <StatCard icon={ShoppingCart} label="Total Purchases" value={purchases.length} color="text-chart-3" />
           <StatCard icon={BarChart3} label="Total Invested" value={`$${totalSpend.toLocaleString()}`} color="text-chart-4" />
         </div>
 
@@ -230,16 +230,16 @@ export default function Dashboard() {
         )}
 
         {/* Tabs */}
-        <Tabs defaultValue="unlocked">
+        <Tabs defaultValue="courses">
           <TabsList className="bg-secondary border border-border/40 mb-6 flex-wrap h-auto gap-1 p-1">
+            <TabsTrigger value="courses">
+              Learning {enrolledCourses.length > 0 && <Badge className="ml-1.5 bg-accent/20 text-accent text-[10px] h-4 px-1.5">{enrolledCourses.length}</Badge>}
+            </TabsTrigger>
+            <TabsTrigger value="recommended">Next Steps</TabsTrigger>
             <TabsTrigger value="unlocked">
               Builds {unlockedBuilds.length > 0 && <Badge className="ml-1.5 bg-primary/20 text-primary text-[10px] h-4 px-1.5">{unlockedBuilds.length}</Badge>}
             </TabsTrigger>
-            <TabsTrigger value="courses">
-              Courses {enrolledCourses.length > 0 && <Badge className="ml-1.5 bg-accent/20 text-accent text-[10px] h-4 px-1.5">{enrolledCourses.length}</Badge>}
-            </TabsTrigger>
             <TabsTrigger value="saved">Saved</TabsTrigger>
-            <TabsTrigger value="recommended">Recommended</TabsTrigger>
             <TabsTrigger value="purchases">History</TabsTrigger>
           </TabsList>
 

@@ -63,9 +63,9 @@ export default function Vault() {
                 Full Docs — Members Only
               </Badge>
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-3">The Build Library</h1>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-3">Build Application Layer</h1>
             <p className="text-muted-foreground max-w-xl text-lg">
-              Browse the full catalog. Preview any build free. Unlock complete documentation, schematics, and BOMs with a membership.
+              Apply what you learn in courses through real, tested systems. Every build includes complete execution frameworks, verified BOMs, and schematics.
             </p>
           </motion.div>
         </div>
@@ -137,13 +137,13 @@ export default function Vault() {
           <div className="w-12 h-12 rounded-2xl bg-primary/20 flex items-center justify-center mx-auto mb-4 glow-cyan">
             <Lock className="w-6 h-6 text-primary" />
           </div>
-          <h3 className="text-2xl font-bold mb-2">Full documentation is available to members</h3>
+          <h3 className="text-2xl font-bold mb-2">Master these systems through execution</h3>
           <p className="text-muted-foreground mb-6 max-w-md mx-auto">
-            Every build includes complete schematics, verified BOMs, and tested assembly sequences.
+            Complete execution frameworks, verified BOMs, schematics, and step-by-step builds. Learn by doing.
           </p>
           <Link to="/pricing">
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90 glow-cyan font-bold h-12 px-8 gap-2 group">
-              View Membership Plans
+             Unlock Full Access
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </Button>
           </Link>
