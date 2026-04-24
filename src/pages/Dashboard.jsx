@@ -10,8 +10,9 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { motion } from 'framer-motion';
 import {
   Unlock, Bookmark, ShoppingCart, ArrowRight, Zap, Clock,
-  Package, TrendingUp, Lock, Star, ChevronRight, BarChart3
+  Package, TrendingUp, Lock, Star, ChevronRight, BarChart3, BookOpen, Layers
 } from 'lucide-react';
+import { COURSES } from '@/lib/courseData';
 
 const categoryLabels = {
   energy_systems: 'Energy Systems',
@@ -109,6 +110,14 @@ export default function Dashboard() {
     enabled: !!user?.email,
   });
 
+  const { data: enrollments = [] } = useQuery({
+    queryKey: ['enrollments', user?.email],
+    queryFn: () => base44.entities.CourseEnrollment.filter({ user_email: user.email }),
+    enabled: !!user?.email,
+  });
+
+  const enrolledCourseIds = enrollments.map(e => e.course_id);
+  const enrolledCourses = COURSES.filter(c => enrolledCourseIds.includes(c.slug));
   const savedBuildIds = savedBuilds.map(s => s.build_id);
   const purchasedBuildIds = purchases.filter(p => p.build_id).map(p => p.build_id);
   const unlockedBuilds = builds.filter(b => purchasedBuildIds.includes(b.id));
@@ -187,7 +196,7 @@ export default function Dashboard() {
         {/* Stats */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
           <StatCard icon={Unlock} label="Unlocked Builds" value={unlockedBuilds.length} color="text-primary" />
-          <StatCard icon={Bookmark} label="Saved Builds" value={savedBuildsList.length} color="text-accent" />
+          <StatCard icon={BookOpen} label="Enrolled Courses" value={enrolledCourses.length} color="text-accent" />
           <StatCard icon={ShoppingCart} label="Purchases" value={purchases.length} color="text-chart-3" />
           <StatCard icon={BarChart3} label="Total Invested" value={`$${totalSpend.toLocaleString()}`} color="text-chart-4" />
         </div>
@@ -222,9 +231,12 @@ export default function Dashboard() {
 
         {/* Tabs */}
         <Tabs defaultValue="unlocked">
-          <TabsList className="bg-secondary border border-border/40 mb-6">
+          <TabsList className="bg-secondary border border-border/40 mb-6 flex-wrap h-auto gap-1 p-1">
             <TabsTrigger value="unlocked">
-              Unlocked {unlockedBuilds.length > 0 && <Badge className="ml-1.5 bg-primary/20 text-primary text-[10px] h-4 px-1.5">{unlockedBuilds.length}</Badge>}
+              Builds {unlockedBuilds.length > 0 && <Badge className="ml-1.5 bg-primary/20 text-primary text-[10px] h-4 px-1.5">{unlockedBuilds.length}</Badge>}
+            </TabsTrigger>
+            <TabsTrigger value="courses">
+              Courses {enrolledCourses.length > 0 && <Badge className="ml-1.5 bg-accent/20 text-accent text-[10px] h-4 px-1.5">{enrolledCourses.length}</Badge>}
             </TabsTrigger>
             <TabsTrigger value="saved">Saved</TabsTrigger>
             <TabsTrigger value="recommended">Recommended</TabsTrigger>
@@ -235,6 +247,34 @@ export default function Dashboard() {
             {unlockedBuilds.length === 0 ? (
               <EmptyState icon={Lock} message="No unlocked builds yet. Get a membership to access the full library." cta="View Plans" link="/pricing" />
             ) : unlockedBuilds.map(b => <BuildListItem key={b.id} build={b} />)}
+          </TabsContent>
+
+          <TabsContent value="courses" className="space-y-3">
+            {enrolledCourses.length === 0 ? (
+              <EmptyState icon={BookOpen} message="No enrolled courses yet. Browse the library and unlock a course." cta="Browse Courses" link="/courses" />
+            ) : enrolledCourses.map(c => (
+              <Card key={c.slug} className="p-4 border-border/50 bg-card hover:border-primary/30 transition-all group">
+                <div className="flex items-center gap-4">
+                  <div className="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <BookOpen className="w-5 h-5 text-accent" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-semibold text-sm truncate">{c.title}</h4>
+                    <div className="flex items-center gap-2 mt-0.5">
+                      <span className="text-xs text-muted-foreground flex items-center gap-1"><Layers className="w-3 h-3" />{c.modules?.length} modules</span>
+                      {enrollments.find(e => e.course_id === c.slug)?.completed && (
+                        <Badge className="bg-chart-3/15 text-chart-3 border-chart-3/25 text-[10px]">Completed</Badge>
+                      )}
+                    </div>
+                  </div>
+                  <Link to={`/courses/${c.slug}`}>
+                    <Button size="sm" variant="ghost" className="gap-1 text-primary group-hover:bg-primary/10">
+                      Continue <ChevronRight className="w-3.5 h-3.5" />
+                    </Button>
+                  </Link>
+                </div>
+              </Card>
+            ))}
           </TabsContent>
 
           <TabsContent value="saved" className="space-y-3">

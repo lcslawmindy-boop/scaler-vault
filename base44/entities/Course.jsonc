@@ -1,0 +1,108 @@
+{
+  "name": "Course",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Course title"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL-friendly slug"
+    },
+    "short_description": {
+      "type": "string",
+      "description": "Card description"
+    },
+    "description": {
+      "type": "string",
+      "description": "Full course description"
+    },
+    "learning_outcomes": {
+      "type": "string",
+      "description": "What you'll learn"
+    },
+    "price": {
+      "type": "number",
+      "description": "Course price ($147\u2013$397)"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "electromagnetic_theory",
+        "energy_systems",
+        "signal_systems",
+        "bio_systems",
+        "engineering_models",
+        "physics_frameworks"
+      ],
+      "description": "Course category"
+    },
+    "module_count": {
+      "type": "number",
+      "description": "Number of modules (5\u20138)"
+    },
+    "modules": {
+      "type": "array",
+      "description": "Course modules",
+      "items": {
+        "type": "object",
+        "properties": {
+          "number": {
+            "type": "number"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "is_free_preview": {
+            "type": "boolean",
+            "default": false
+          },
+          "duration_mins": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Cover image URL"
+    },
+    "instructor": {
+      "type": "string",
+      "description": "Instructor name"
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "intermediate",
+        "advanced",
+        "expert"
+      ],
+      "default": "advanced"
+    },
+    "is_published": {
+      "type": "boolean",
+      "default": true
+    },
+    "tier_required": {
+      "type": "string",
+      "enum": [
+        "free",
+        "starter",
+        "pro",
+        "elite",
+        "purchase"
+      ],
+      "default": "purchase"
+    }
+  },
+  "required": [
+    "title",
+    "price",
+    "short_description"
+  ]
+}

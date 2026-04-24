@@ -20,6 +20,8 @@ import Positioning from './pages/Positioning';
 import InvestorAudit from './pages/InvestorAudit';
 import KitUpsell from './pages/KitUpsell';
 import StripeSuccess from './pages/StripeSuccess';
+import Courses from './pages/Courses';
+import CourseDetail from './pages/CourseDetail';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -57,6 +59,8 @@ const AuthenticatedApp = () => {
         <Route path="/investor-audit" element={<InvestorAudit />} />
         <Route path="/kits" element={<KitUpsell />} />
         <Route path="/success" element={<StripeSuccess />} />
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/courses/:slug" element={<CourseDetail />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>

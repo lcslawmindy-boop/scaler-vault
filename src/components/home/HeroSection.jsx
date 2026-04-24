@@ -51,26 +51,12 @@ export default function HeroSection() {
             </Badge>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.0] tracking-tight mb-6">
-              Build.{' '}
-              <span className="relative inline-block">
-                <motion.span
-                  key={wordIndex}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.35 }}
-                  className="text-primary"
-                >
-                  {ROTATING_WORDS[wordIndex]}.
-                </motion.span>
-              </span>
-              <br />
-              Repeat.
+              Build Advanced<br />Engineering Systems<br />
+              <span className="text-primary">Most People Never See</span>
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-lg mb-8 leading-relaxed">
-              Documented schematics, verified BOMs, and tested assembly guides for advanced engineering systems.
-              Researched and maintained by working engineers.
+              Access complete build frameworks, BOMs, prototype systems, and a <strong className="text-foreground">26-course advanced research library</strong> inside a private vault.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-4 mb-10">
@@ -90,7 +76,7 @@ export default function HeroSection() {
                   variant="outline"
                   className="border-border/60 hover:border-primary/30 hover:bg-primary/5 h-14 px-8 text-base font-medium"
                 >
-                  Browse Free Previews
+                  View Free Preview
                 </Button>
               </Link>
             </div>
@@ -98,9 +84,9 @@ export default function HeroSection() {
             {/* Trust signals */}
             <div className="flex flex-wrap gap-6">
               {[
-                { value: '47', label: 'Build References' },
-                { value: '200+', label: 'Verified Components' },
-                { value: 'Pro', label: 'Engineer-Reviewed' },
+                { value: '26', label: 'Research Courses' },
+                { value: '29+', label: 'Build Systems' },
+                { value: 'Weekly', label: 'New Content' },
               ].map((s, i) => (
                 <div key={i} className="text-center">
                   <div className="text-2xl font-bold text-primary">{s.value}</div>

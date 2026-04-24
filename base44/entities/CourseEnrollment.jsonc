@@ -1,0 +1,32 @@
+{
+  "name": "CourseEnrollment",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "User email"
+    },
+    "course_id": {
+      "type": "string",
+      "description": "Course ID"
+    },
+    "progress_modules": {
+      "type": "array",
+      "description": "Completed module numbers",
+      "items": {
+        "type": "number"
+      }
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false
+    },
+    "purchase_amount": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "user_email",
+    "course_id"
+  ]
+}

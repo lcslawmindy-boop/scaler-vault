@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Zap, X } from 'lucide-react';
+import { Menu, Zap, X, Lock } from 'lucide-react';
 
 const navLinks = [
   { label: 'Vault', path: '/vault' },
-  { label: 'Pricing', path: '/pricing' },
-  { label: 'Products', path: '/products' },
+  { label: 'Courses', path: '/courses' },
+  { label: 'Plans', path: '/pricing' },
+  { label: 'Kits', path: '/kits' },
   { label: 'Dashboard', path: '/dashboard' },
 ];
 
@@ -46,8 +47,9 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center gap-3">
             <Link to="/pricing">
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 glow-cyan font-semibold">
-                Access the Library
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 glow-cyan font-semibold gap-2">
+                <Lock className="w-4 h-4" />
+                Unlock the Vault
               </Button>
             </Link>
           </div>
@@ -76,8 +78,9 @@ export default function Navbar() {
                 ))}
                 <div className="mt-4 px-4">
                   <Link to="/pricing" onClick={() => setOpen(false)}>
-                    <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 glow-cyan font-semibold">
-                      Access the Library
+                    <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 glow-cyan font-semibold gap-2">
+                      <Lock className="w-4 h-4" />
+                      Unlock the Vault
                     </Button>
                   </Link>
                 </div>

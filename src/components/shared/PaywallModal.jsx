@@ -36,11 +36,11 @@ const HEADLINES = [
 
 // ─── Value Bullets ────────────────────────────────────────────────────────────
 const VALUE_BULLETS = [
-  { icon: CheckCircle2, text: 'Full schematics & wiring diagrams — print-ready' },
-  { icon: CheckCircle2, text: 'Complete BOMs with exact part numbers & supplier links' },
-  { icon: CheckCircle2, text: 'Step-by-step execution — no experience gaps' },
-  { icon: CheckCircle2, text: 'Market context & monetization frameworks per build' },
-  { icon: CheckCircle2, text: 'New builds added weekly — always expanding' },
+  { icon: CheckCircle2, text: '26-course advanced research library — full access' },
+  { icon: CheckCircle2, text: 'Full schematics & verified BOMs — print-ready' },
+  { icon: CheckCircle2, text: 'Complete build documentation & execution systems' },
+  { icon: CheckCircle2, text: 'Downloadable plans, firmware, and CAD files' },
+  { icon: CheckCircle2, text: 'New builds and courses added weekly' },
 ];
 
 // ─── Objection Handlers ───────────────────────────────────────────────────────
@@ -189,7 +189,7 @@ export default function PaywallModal({ open, onOpenChange }) {
           </div>
           <div className="flex items-center gap-1.5">
             <TrendingUp className="w-3.5 h-3.5 text-muted-foreground" />
-            <span className="text-xs text-muted-foreground">47 builds & growing</span>
+            <span className="text-xs text-muted-foreground">29+ builds · 26 courses</span>
           </div>
           <div className="flex items-center gap-1.5">
             <Shield className="w-3.5 h-3.5 text-muted-foreground" />
