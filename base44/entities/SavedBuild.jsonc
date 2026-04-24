@@ -1,0 +1,18 @@
+{
+  "name": "SavedBuild",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "User email"
+    },
+    "build_id": {
+      "type": "string",
+      "description": "Build ID"
+    }
+  },
+  "required": [
+    "user_email",
+    "build_id"
+  ]
+}

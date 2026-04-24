@@ -1,0 +1,22 @@
+{
+  "name": "EmailCapture",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "User's name"
+    },
+    "email": {
+      "type": "string",
+      "description": "User's email"
+    },
+    "source": {
+      "type": "string",
+      "default": "popup",
+      "description": "Where the capture came from"
+    }
+  },
+  "required": [
+    "email"
+  ]
+}

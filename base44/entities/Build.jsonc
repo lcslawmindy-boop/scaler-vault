@@ -1,0 +1,107 @@
+{
+  "name": "Build",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Build title"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL-friendly slug"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "energy_systems",
+        "bio_signal_systems",
+        "communication_systems",
+        "demonstration_builds"
+      ],
+      "description": "Build category"
+    },
+    "short_description": {
+      "type": "string",
+      "description": "Brief description for cards"
+    },
+    "overview": {
+      "type": "string",
+      "description": "Full overview text"
+    },
+    "market_context": {
+      "type": "string",
+      "description": "Market context and relevance"
+    },
+    "estimated_build_cost": {
+      "type": "number",
+      "description": "Estimated cost to build"
+    },
+    "bom_summary": {
+      "type": "string",
+      "description": "Bill of materials summary"
+    },
+    "steps": {
+      "type": "array",
+      "description": "Step-by-step build instructions",
+      "items": {
+        "type": "object",
+        "properties": {
+          "step_number": {
+            "type": "number"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "video_url": {
+      "type": "string",
+      "description": "Optional video URL"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Cover image URL"
+    },
+    "tier_required": {
+      "type": "string",
+      "enum": [
+        "free",
+        "starter",
+        "pro",
+        "elite"
+      ],
+      "default": "pro",
+      "description": "Minimum tier to access full build"
+    },
+    "digital_product_price": {
+      "type": "number",
+      "description": "Price for individual purchase ($500-$2000)"
+    },
+    "kit_available": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether a starter kit is available"
+    },
+    "kit_price": {
+      "type": "number",
+      "description": "Starter kit price"
+    },
+    "kit_components": {
+      "type": "string",
+      "description": "Kit components summary"
+    },
+    "is_published": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "title",
+    "category",
+    "short_description"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Purchase",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Purchaser email"
+    },
+    "build_id": {
+      "type": "string",
+      "description": "ID of the purchased build"
+    },
+    "purchase_type": {
+      "type": "string",
+      "enum": [
+        "digital_product",
+        "kit",
+        "subscription"
+      ],
+      "description": "Type of purchase"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Amount paid"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "completed",
+        "refunded"
+      ],
+      "default": "completed"
+    }
+  },
+  "required": [
+    "user_email",
+    "purchase_type",
+    "amount"
+  ]
+}
