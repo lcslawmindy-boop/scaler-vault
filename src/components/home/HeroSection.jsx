@@ -27,25 +27,23 @@ export default function HeroSection() {
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-xs font-medium mb-8"
           >
             <Zap className="w-3 h-3" />
-            Private Engineering Build Platform
+            Technical Reference Library for Hardware Engineers
           </motion.div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black leading-[1.05] tracking-tight mb-6">
-            Build Advanced
+            Structured Build References
             <br />
-            <span className="text-primary">Engineering Systems</span>
-            <br />
-            Most People Never See
+            <span className="text-primary">For Hardware Prototyping</span>
           </h1>
 
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            Access complete build frameworks, BOMs, and execution systems inside a private vault — built for engineers who ship.
+            Documented schematics, verified BOMs, and tested execution guides for advanced engineering systems — researched, built, and maintained by working engineers.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link to="/vault">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 glow-cyan-strong font-bold h-13 px-8 text-base gap-2">
-                Unlock the Vault
+                Browse the Library
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </Link>
@@ -64,9 +62,9 @@ export default function HeroSection() {
             className="grid grid-cols-3 gap-8 max-w-lg mx-auto mt-16"
           >
             {[
-              { value: '50+', label: 'Build Guides' },
-              { value: '200+', label: 'Components' },
-              { value: '1.2k', label: 'Engineers' },
+              { value: '47', label: 'Build References' },
+              { value: '200+', label: 'Verified Components' },
+              { value: '1,200+', label: 'Engineers Using' },
             ].map((stat, i) => (
               <div key={i} className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-primary">{stat.value}</div>

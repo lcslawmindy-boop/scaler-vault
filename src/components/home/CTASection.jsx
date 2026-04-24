@@ -16,15 +16,15 @@ export default function CTASection() {
         className="relative max-w-3xl mx-auto px-4 text-center"
       >
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-          Ready to Build Something
-          <span className="text-primary"> Extraordinary</span>?
+          Start Your Next
+          <span className="text-primary"> Prototype</span> With a Solid Reference
         </h2>
         <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
-          Join engineers who are building advanced systems with complete guides, BOMs, and execution frameworks.
+          Access documented schematics, verified BOMs, and tested assembly guides used by hardware engineers building real systems.
         </p>
         <Link to="/pricing">
           <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 glow-cyan-strong font-bold h-13 px-10 text-base gap-2">
-            Get Started Now
+            Access the Library
             <ArrowRight className="w-5 h-5" />
           </Button>
         </Link>

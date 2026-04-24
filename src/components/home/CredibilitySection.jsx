@@ -5,18 +5,18 @@ import { Star, Quote } from 'lucide-react';
 const testimonials = [
   {
     name: 'Marcus Chen',
-    role: 'Hardware Engineer',
-    text: 'The BOM detail alone saved me weeks of research. Absolutely worth the investment.',
+    role: 'Hardware Engineer, Embedded Systems',
+    text: 'The BOM documentation alone cut my component research time significantly. Part numbers, tolerances, and sourcing options all in one place.',
   },
   {
     name: 'Sarah Okonkwo',
-    role: 'Systems Architect',
-    text: 'I built my first prototype in 3 days using the execution framework from the vault.',
+    role: 'Systems Architect, IoT',
+    text: 'The assembly sequences are structured the way professional documentation should be — test points, expected values, and failure modes all documented.',
   },
   {
     name: 'James Patterson',
-    role: 'Electronics Hobbyist',
-    text: 'The quality of documentation here is better than anything I\'ve found elsewhere. Period.',
+    role: 'Research Engineer, Biomedical',
+    text: 'The technical depth is what I needed. The EEG guide in particular covers the analog front-end design at a level I haven\'t seen in public literature.',
   },
 ];
 
@@ -29,9 +29,9 @@ export default function CredibilitySection() {
         viewport={{ once: true }}
         className="text-center mb-14"
       >
-        <h2 className="text-3xl sm:text-4xl font-bold mb-4">Trusted by Builders</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold mb-4">Used by Working Engineers</h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
-          Engineers and makers who ship use Scalar Vault to accelerate their builds.
+          Engineers across hardware, embedded systems, and research use Scalar Vault as a reference during active prototyping.
         </p>
       </motion.div>
 

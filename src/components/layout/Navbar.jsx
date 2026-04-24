@@ -47,7 +47,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <Link to="/pricing">
               <Button className="bg-primary text-primary-foreground hover:bg-primary/90 glow-cyan font-semibold">
-                Unlock the Vault
+                Access the Library
               </Button>
             </Link>
           </div>
@@ -77,7 +77,7 @@ export default function Navbar() {
                 <div className="mt-4 px-4">
                   <Link to="/pricing" onClick={() => setOpen(false)}>
                     <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 glow-cyan font-semibold">
-                      Unlock the Vault
+                      Access the Library
                     </Button>
                   </Link>
                 </div>

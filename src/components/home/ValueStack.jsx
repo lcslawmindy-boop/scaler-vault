@@ -3,12 +3,12 @@ import { BookOpen, Cpu, FileText, RefreshCw, Shield, Users } from 'lucide-react'
 import { motion } from 'framer-motion';
 
 const features = [
-  { icon: BookOpen, title: 'Complete Build Guides', desc: 'Step-by-step breakdowns from concept to completion with detailed instructions.' },
-  { icon: FileText, title: 'Full BOMs', desc: 'Itemized bills of materials with costs, suppliers, and alternatives.' },
-  { icon: Cpu, title: 'Execution Frameworks', desc: 'Proven systems and workflows to go from design to working prototype.' },
-  { icon: RefreshCw, title: 'Weekly Updates', desc: 'New builds, updates, and improvements added to the vault every week.' },
-  { icon: Shield, title: 'Verified Designs', desc: 'Every build is tested and documented by experienced engineers.' },
-  { icon: Users, title: 'Private Community', desc: 'Connect with other builders and get support on your projects.' },
+  { icon: BookOpen, title: 'Documented Build Guides', desc: 'Step-by-step technical references covering circuit design, assembly sequence, and testing procedures.' },
+  { icon: FileText, title: 'Verified Bill of Materials', desc: 'Itemized component lists with exact part numbers, sourcing links, and tolerance specifications.' },
+  { icon: Cpu, title: 'Tested Execution Sequences', desc: 'Assembly and debugging workflows derived from real prototype builds, not theoretical walkthroughs.' },
+  { icon: RefreshCw, title: 'Continuously Updated', desc: 'Build references are revised as components change, better techniques emerge, or issues are reported.' },
+  { icon: Shield, title: 'Engineer-Reviewed', desc: 'Each guide is reviewed for technical accuracy before publication and after reader feedback.' },
+  { icon: Users, title: 'Practitioner Community', desc: 'A community of working engineers and researchers building from the same reference library.' },
 ];
 
 export default function ValueStack() {
@@ -22,9 +22,9 @@ export default function ValueStack() {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">What You Get Inside</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">What Each Reference Includes</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Everything you need to build advanced engineering systems, from start to finish.
+            Every build guide is structured around documentation standards used in professional hardware development.
           </p>
         </motion.div>
 
