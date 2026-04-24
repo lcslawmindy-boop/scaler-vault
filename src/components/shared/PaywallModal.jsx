@@ -13,24 +13,24 @@ import { base44 } from '@/api/base44Client';
 // ─── A/B Headline Variants ───────────────────────────────────────────────────
 const HEADLINES = [
   {
-    headline: "You're One Step Away From the Full Blueprint",
-    sub: "Most engineers never see this level of detail. You found the edge — don't stop here.",
+    headline: "Full Documentation Is Available to Members",
+    sub: "Complete schematics, verified BOMs, and tested assembly sequences — unlocked with a membership.",
   },
   {
-    headline: "This Build Is Classified. Your Clearance Is Pending.",
-    sub: "Complete schematics, sourced BOMs, and execution systems are locked behind Pro.",
+    headline: "The Preview Ends Here. Full Docs Begin Inside.",
+    sub: "Every build reference includes complete schematics, sourced BOMs, and step-by-step assembly guidance.",
   },
   {
-    headline: "The Preview Ends Here. The Real Work Begins Inside.",
-    sub: "Full build documentation, tested frameworks, and supplier links — all inside the vault.",
+    headline: "This Build Has a Complete Reference Guide",
+    sub: "Verified BOM, full schematics, and tested execution sequences — accessible with Pro membership.",
   },
   {
-    headline: "Engineers Who Build This Make More Than Those Who Don't.",
-    sub: "Premium builds. Full docs. No gatekeeping — except this one.",
+    headline: "Skip 40 Hours of Research",
+    sub: "Full component documentation, sourcing links, and assembly sequences — all in one reference.",
   },
   {
-    headline: "Stop Reading Abstracts. Start Building Real Systems.",
-    sub: "Every build inside has a complete BOM, sourcing guide, and step-by-step execution plan.",
+    headline: "Built for Engineers Who Actually Prototype",
+    sub: "Implementation-level documentation that goes beyond tutorials: failure modes, tolerances, integration tradeoffs.",
   },
 ];
 

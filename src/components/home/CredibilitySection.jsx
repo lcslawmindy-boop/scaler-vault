@@ -6,7 +6,7 @@ const testimonials = [
   {
     name: 'Marcus Chen',
     role: 'Hardware Engineer, Embedded Systems',
-    text: 'The BOM documentation alone cut my component research time significantly. Part numbers, tolerances, and sourcing options all in one place.',
+    text: 'The BOM documentation cut my component research time significantly. Part numbers, tolerances, and sourcing options all in one place.',
   },
   {
     name: 'Sarah Okonkwo',
@@ -16,7 +16,7 @@ const testimonials = [
   {
     name: 'James Patterson',
     role: 'Research Engineer, Biomedical',
-    text: 'The technical depth is what I needed. The EEG guide in particular covers the analog front-end design at a level I haven\'t seen in public literature.',
+    text: 'The EEG guide covers the analog front-end design at a level I haven\'t seen in public literature. Exactly what I needed for my prototype.',
   },
 ];
 
@@ -43,9 +43,9 @@ export default function CredibilitySection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="p-6 rounded-2xl border border-border/50 bg-card/50"
+            className="p-6 rounded-2xl border border-border/50 bg-card/50 hover:border-primary/20 transition-all"
           >
-            <Quote className="w-8 h-8 text-primary/30 mb-4" />
+            <Quote className="w-8 h-8 text-primary/20 mb-4" />
             <p className="text-sm text-foreground/80 leading-relaxed mb-5">{t.text}</p>
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center">

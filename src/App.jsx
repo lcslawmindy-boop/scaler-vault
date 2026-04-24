@@ -18,6 +18,8 @@ import VideoScripts from './pages/VideoScripts';
 import ProductLadder from './pages/ProductLadder';
 import Positioning from './pages/Positioning';
 import InvestorAudit from './pages/InvestorAudit';
+import KitUpsell from './pages/KitUpsell';
+import StripeSuccess from './pages/StripeSuccess';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -53,6 +55,8 @@ const AuthenticatedApp = () => {
         <Route path="/product-ladder" element={<ProductLadder />} />
         <Route path="/positioning" element={<Positioning />} />
         <Route path="/investor-audit" element={<InvestorAudit />} />
+        <Route path="/kits" element={<KitUpsell />} />
+        <Route path="/success" element={<StripeSuccess />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
