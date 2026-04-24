@@ -185,7 +185,7 @@ export default function PaywallModal({ open, onOpenChange }) {
         <div className="px-6 py-3 border-t border-border/30 bg-secondary/30 flex items-center justify-between gap-4 flex-wrap">
           <div className="flex items-center gap-1.5">
             <Users className="w-3.5 h-3.5 text-muted-foreground" />
-            <span className="text-xs text-muted-foreground">2,400+ engineers enrolled</span>
+            <span className="text-xs text-muted-foreground">Early access — founding members</span>
           </div>
           <div className="flex items-center gap-1.5">
             <TrendingUp className="w-3.5 h-3.5 text-muted-foreground" />

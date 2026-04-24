@@ -17,6 +17,7 @@ import EmailFunnel from './pages/EmailFunnel';
 import VideoScripts from './pages/VideoScripts';
 import ProductLadder from './pages/ProductLadder';
 import Positioning from './pages/Positioning';
+import InvestorAudit from './pages/InvestorAudit';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -51,6 +52,7 @@ const AuthenticatedApp = () => {
         <Route path="/video-scripts" element={<VideoScripts />} />
         <Route path="/product-ladder" element={<ProductLadder />} />
         <Route path="/positioning" element={<Positioning />} />
+        <Route path="/investor-audit" element={<InvestorAudit />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
