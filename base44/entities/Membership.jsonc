@@ -1,0 +1,61 @@
+{
+  "name": "Membership",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Membership tier name (e.g., 'Builder Pro')"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL-friendly slug"
+    },
+    "description": {
+      "type": "string",
+      "description": "Membership tier description"
+    },
+    "price_monthly": {
+      "type": "number",
+      "description": "Monthly price in USD"
+    },
+    "price_yearly": {
+      "type": "number",
+      "description": "Yearly price in USD"
+    },
+    "course_access": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether membership includes full course access"
+    },
+    "builds_per_week": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of new build plans released per week for this tier"
+    },
+    "order": {
+      "type": "number",
+      "description": "Display order on pricing page"
+    },
+    "features": {
+      "type": "array",
+      "description": "List of tier features",
+      "items": {
+        "type": "string"
+      }
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether this tier is available for purchase"
+    },
+    "is_published": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "name",
+    "slug",
+    "price_monthly"
+  ]
+}
