@@ -3,8 +3,8 @@
  */
 
 export const APP_CONFIG = {
-  STRIPE_PUBLISHABLE_KEY: process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY || '',
-  APP_URL: process.env.REACT_APP_URL || 'http://localhost:5173',
+  STRIPE_PUBLISHABLE_KEY: import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || '',
+  APP_URL: import.meta.env.VITE_APP_URL || 'http://localhost:5173',
   
   TIERS: {
     FREE_PREVIEW: 'free_preview',

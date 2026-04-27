@@ -8,7 +8,7 @@ import { Card } from "@/components/ui/card";
 import { CheckCircle2, Lock, Shield, Zap, Users, Clock } from 'lucide-react';
 import { base44 } from '@/api/base44Client';
 
-const STRIPE_KEY = process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY;
+const STRIPE_KEY = import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY;
 
 const PLANS = [
   {
