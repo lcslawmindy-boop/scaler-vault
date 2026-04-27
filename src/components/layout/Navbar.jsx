@@ -5,10 +5,8 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Zap, X, Lock } from 'lucide-react';
 
 const navLinks = [
-  { label: 'Vault', path: '/vault' },
   { label: 'Courses', path: '/courses' },
-  { label: 'Plans', path: '/pricing' },
-  { label: 'Kits', path: '/kits' },
+  { label: 'Pricing', path: '/pricing' },
   { label: 'Dashboard', path: '/dashboard' },
 ];
 

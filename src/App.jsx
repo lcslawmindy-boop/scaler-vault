@@ -8,17 +8,13 @@ import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 
 import AppLayout from './components/layout/AppLayout';
 import Home from './pages/Home';
-import Vault from './pages/Vault';
-import BuildDetail from './pages/BuildDetail';
 import Pricing from './pages/Pricing';
-import Products from './pages/Products';
 import Dashboard from './pages/Dashboard';
 import EmailFunnel from './pages/EmailFunnel';
 import VideoScripts from './pages/VideoScripts';
 import ProductLadder from './pages/ProductLadder';
 import Positioning from './pages/Positioning';
 import InvestorAudit from './pages/InvestorAudit';
-import KitUpsell from './pages/KitUpsell';
 import StripeSuccess from './pages/StripeSuccess';
 import Courses from './pages/Courses';
 import CourseDetail from './pages/CourseDetail';
@@ -47,17 +43,14 @@ const AuthenticatedApp = () => {
     <Routes>
       <Route element={<AppLayout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/vault" element={<Vault />} />
-        <Route path="/build/:id" element={<BuildDetail />} />
+
         <Route path="/pricing" element={<Pricing />} />
-        <Route path="/products" element={<Products />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/email-funnel" element={<EmailFunnel />} />
         <Route path="/video-scripts" element={<VideoScripts />} />
         <Route path="/product-ladder" element={<ProductLadder />} />
         <Route path="/positioning" element={<Positioning />} />
         <Route path="/investor-audit" element={<InvestorAudit />} />
-        <Route path="/kits" element={<KitUpsell />} />
         <Route path="/success" element={<StripeSuccess />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/courses/:slug" element={<CourseDetail />} />
