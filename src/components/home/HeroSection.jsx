@@ -13,9 +13,9 @@ export default function HeroSection({ onCtaClick }) {
       
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
-          <Badge className="mb-6 bg-primary/15 text-primary border-primary/25">
+          <Badge className="mb-6 bg-destructive/15 text-destructive border-destructive/25 font-semibold px-3 py-1">
             <Zap className="w-3 h-3 mr-1.5" />
-            Access 20+ Advanced Systems
+            Limited Founding Pricing
           </Badge>
         </motion.div>
 
@@ -25,9 +25,9 @@ export default function HeroSection({ onCtaClick }) {
           transition={{ delay: 0.2 }}
           className="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 leading-tight"
         >
-          Learn Advanced Systems.
+          Turn Complex Systems Into Real Builds
           <br />
-          <span className="text-primary">Build Real Prototypes.</span>
+          <span className="text-primary">Step-by-Step</span>
         </motion.h1>
 
         <motion.p
@@ -36,7 +36,7 @@ export default function HeroSection({ onCtaClick }) {
           transition={{ delay: 0.3 }}
           className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8"
         >
-          Access structured courses, guided build systems, and execution frameworks in one platform. Go from theory to working prototype.
+          Learn through structured courses and apply instantly with guided build systems and full BOMs.
         </motion.p>
 
         <motion.div
@@ -50,7 +50,7 @@ export default function HeroSection({ onCtaClick }) {
             className="bg-primary text-primary-foreground hover:bg-primary/90 glow-cyan font-bold h-12 px-8 gap-2 text-lg"
           >
             <Zap className="w-5 h-5" />
-            Unlock the Vault
+            Unlock Full Access
             <ArrowRight className="w-5 h-5" />
           </Button>
           <Link to="/courses">
@@ -69,10 +69,11 @@ export default function HeroSection({ onCtaClick }) {
           transition={{ delay: 0.5 }}
           className="flex items-center justify-center gap-6 text-sm text-muted-foreground flex-wrap"
         >
-          <div>✓ 20+ courses</div>
-          <div>✓ 30+ builds</div>
-          <div>✓ Complete BOMs</div>
-          <div>✓ Weekly updates</div>
+          <div>20+ courses</div>
+          <div>•</div>
+          <div>Real systems</div>
+          <div>•</div>
+          <div>Updated weekly</div>
         </motion.div>
 
         <motion.div

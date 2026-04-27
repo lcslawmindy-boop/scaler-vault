@@ -113,15 +113,18 @@ export default function Pricing() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-primary/6 rounded-full blur-3xl" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-14 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <Badge variant="outline" className="mb-6 border-primary/30 text-primary bg-primary/5">
+            <Badge variant="outline" className="mb-6 border-destructive/30 text-destructive bg-destructive/5">
               <Shield className="w-3 h-3 mr-1.5" />
-              30-day guarantee. Cancel anytime.
+              Founding pricing — expires soon
             </Badge>
             <h1 className="text-5xl sm:text-6xl font-black mb-4">
               Choose Your <span className="text-primary">Access Level</span>
             </h1>
             <p className="text-muted-foreground max-w-xl mx-auto text-lg">
               Full courses, complete builds, execution frameworks. All with instant access.
+            </p>
+            <p className="text-primary font-semibold text-sm mt-3">
+              Pro plan: Less than $3/day to access the full system
             </p>
           </motion.div>
         </div>

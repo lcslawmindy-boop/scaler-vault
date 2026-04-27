@@ -13,34 +13,41 @@ import { base44 } from '@/api/base44Client';
 // ─── A/B Headline Variants ───────────────────────────────────────────────────
 const HEADLINES = [
   {
-    headline: "You're Only Seeing the Preview",
-    sub: "Full courses and complete build systems unlock with membership. Learn the framework. Apply it immediately.",
+    headline: "You've Only Seen a Small Part of the System",
+    sub: "The real value is inside the full courses and build frameworks.",
   },
   {
-    headline: "This System Has a Complete Course Path",
-    sub: "Structured learning modules + full build frameworks — everything you need to understand AND execute.",
+    headline: "This is Just the Free Preview",
+    sub: "Members get complete courses, full build systems, verified BOMs, and step-by-step execution paths.",
   },
   {
-    headline: "Most Builders Never Go This Deep",
-    sub: "Full courses, complete systems, verified BOMs, execution frameworks — access the full learning path.",
-  },
-  {
-    headline: "Learn the System. Build the Prototype.",
-    sub: "Unlock the full course library and build vault. Everything from theory to execution.",
-  },
-  {
-    headline: "20% Knowledge Isn't Enough",
-    sub: "Members access 26 structured courses plus complete build systems with verified execution paths.",
+    headline: "The Complete System Starts Here",
+    sub: "Unlock 26 structured courses and 30+ complete builds with verified execution frameworks.",
   },
 ];
 
-// ─── Value Bullets ────────────────────────────────────────────────────────────
-const VALUE_BULLETS = [
-  { icon: CheckCircle2, text: '26-course advanced research library — full access' },
-  { icon: CheckCircle2, text: 'Full schematics & verified BOMs — print-ready' },
-  { icon: CheckCircle2, text: 'Complete build documentation & execution systems' },
-  { icon: CheckCircle2, text: 'Downloadable plans, firmware, and CAD files' },
-  { icon: CheckCircle2, text: 'New builds and courses added weekly' },
+// ─── Free vs Pro Comparison ───────────────────────────────────────────────────
+const COMPARISON = [
+  {
+    feature: 'Course Library',
+    free: 'Limited previews (1 module)',
+    pro: 'Full 26-course access',
+  },
+  {
+    feature: 'Build Systems',
+    free: 'Overview only',
+    pro: 'Complete builds + BOMs',
+  },
+  {
+    feature: 'Execution Paths',
+    free: '✗ Locked',
+    pro: 'Full documentation',
+  },
+  {
+    feature: 'Weekly Updates',
+    free: 'Summaries only',
+    pro: 'Full access first',
+  },
 ];
 
 // ─── Objection Handlers ───────────────────────────────────────────────────────
@@ -160,23 +167,18 @@ export default function PaywallModal({ open, onOpenChange }) {
           <p className="text-sm text-muted-foreground leading-relaxed">{sub}</p>
         </div>
 
-        {/* ── Value bullets ── */}
+        {/* ── Free vs Pro Comparison ── */}
         <div className="px-6 py-4 border-t border-border/30">
           <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
-            What unlocks immediately
+            Free vs Pro
           </p>
-          <div className="space-y-2.5">
-            {VALUE_BULLETS.map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: -8 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.06 }}
-                className="flex items-center gap-2.5"
-              >
-                <item.icon className="w-4 h-4 text-primary flex-shrink-0" />
-                <span className="text-sm text-foreground/85">{item.text}</span>
-              </motion.div>
+          <div className="space-y-2 text-xs">
+            {COMPARISON.map((row, i) => (
+              <div key={i} className="grid grid-cols-3 gap-2">
+                <div className="font-medium text-foreground/70">{row.feature}</div>
+                <div className="text-muted-foreground/60">{row.free}</div>
+                <div className="text-primary font-medium">{row.pro}</div>
+              </div>
             ))}
           </div>
         </div>
@@ -203,7 +205,7 @@ export default function PaywallModal({ open, onOpenChange }) {
           <Link to="/pricing" onClick={() => { handleCTAClick('primary'); onOpenChange(false); }}>
             <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 glow-cyan font-bold h-12 text-sm gap-2 group">
               <Lock className="w-4 h-4" />
-              Unlock Full Access — $99/mo
+              Unlock Everything Now
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </Button>
           </Link>
@@ -232,8 +234,8 @@ export default function PaywallModal({ open, onOpenChange }) {
           <div className="flex items-center justify-center gap-2 p-3 rounded-xl bg-primary/5 border border-primary/15">
             <Clock className="w-3.5 h-3.5 text-primary flex-shrink-0" />
             <span className="text-xs text-foreground/70">
-             <span className="font-semibold text-primary">New course launches Monday.</span>{' '}
-             Members get early access to the full structured framework.
+             <span className="font-semibold text-primary">Founding pricing expires soon.</span>{' '}
+             Prices increase when we hit 1,000 members.
             </span>
           </div>
         </div>

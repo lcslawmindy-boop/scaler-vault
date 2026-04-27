@@ -9,19 +9,19 @@ import { CheckCircle2, Zap, ArrowRight, Package, Lightbulb } from 'lucide-react'
 
 const UPSELLS = [
   {
-    name: 'Starter Kit',
+    name: 'Starter Hardware Kit',
     price: 149,
-    description: 'Pre-tested components for your first build.',
-    features: ['Verified components', 'Quality tested', 'Free shipping'],
-    cta: 'Get Starter Kit',
+    description: 'Pre-sourced, quality-tested components for your first build project.',
+    features: ['All verified components', 'Quality tested', 'Free shipping'],
+    cta: 'Add Kit',
     color: 'border-chart-3/30 bg-chart-3/5',
   },
   {
-    name: 'Advanced Course Bundle',
+    name: '90-Day Build Plan',
     price: 297,
-    description: 'Master 6 related courses in one domain.',
-    features: ['6 advanced courses', 'Curated path', 'Lifetime access'],
-    cta: 'Get Bundle',
+    description: 'Structured 3-month learning path with weekly execution goals.',
+    features: ['Curated course sequence', 'Weekly milestones', 'Build tracking'],
+    cta: 'Start Plan',
     color: 'border-accent/30 bg-accent/5',
     highlighted: true,
   },
@@ -68,9 +68,9 @@ export default function CheckoutSuccess() {
             <div className="w-16 h-16 rounded-full bg-chart-3/20 flex items-center justify-center mx-auto mb-6">
               <CheckCircle2 className="w-8 h-8 text-chart-3" />
             </div>
-            <h1 className="text-4xl font-bold mb-2">You're In!</h1>
+            <h1 className="text-4xl font-bold mb-2">Welcome to the Full System</h1>
             <p className="text-lg text-muted-foreground mb-6">
-              Full access is live. Start learning immediately.
+              All 26 courses and 30+ complete builds are now unlocked. Start with your first course or jump straight to building.
             </p>
             <Link to="/dashboard">
               <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold h-12 px-8 gap-2">
@@ -93,9 +93,9 @@ export default function CheckoutSuccess() {
         >
           <div className="flex items-center gap-2 mb-6">
             <Lightbulb className="w-5 h-5 text-accent" />
-            <h2 className="text-2xl font-bold">Ready to Build Faster?</h2>
+            <h2 className="text-2xl font-bold">Want Faster Results?</h2>
           </div>
-          <p className="text-muted-foreground">Add physical hardware or bundle multiple courses.</p>
+          <p className="text-muted-foreground">Accelerate with pre-tested hardware or a structured learning roadmap.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
@@ -142,10 +142,10 @@ export default function CheckoutSuccess() {
           <h3 className="text-xl font-bold mb-4">Your Next Steps</h3>
           <div className="space-y-3">
             {[
-              'Start with Course 1: Fundamentals Framework',
-              'Watch the first 2 modules (1 hour)',
-              'Browse the build vault for your first project',
-              'Join the community Discord',
+              'Go to Dashboard → Pick your first course',
+              'Complete Module 1 (1 hour) to get grounded',
+              'Browse Builds and pick your first project',
+              'Download full BOM and sourcing guide',
             ].map((step, i) => (
               <div key={i} className="flex items-center gap-3">
                 <Badge className="bg-primary text-primary-foreground w-6 h-6 p-0 flex items-center justify-center flex-shrink-0">
