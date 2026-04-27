@@ -10,7 +10,7 @@ import AppLayout from './components/layout/AppLayout';
 import Home from './pages/Home';
 import Vault from './pages/Vault';
 import BuildDetail from './pages/BuildDetail';
-import Pricing from './pages/Pricing';
+
 import Products from './pages/Products';
 import Dashboard from './pages/Dashboard';
 import KitUpsell from './pages/KitUpsell';
@@ -51,7 +51,7 @@ const AuthenticatedApp = () => {
 
         <Route path="/vault" element={<Vault />} />
         <Route path="/build/:id" element={<BuildDetail />} />
-        <Route path="/pricing" element={<Pricing />} />
+
         <Route path="/products" element={<Products />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/kits" element={<KitUpsell />} />
