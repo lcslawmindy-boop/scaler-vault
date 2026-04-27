@@ -80,15 +80,16 @@
       "type": "boolean",
       "default": false
     },
-    "tier_required": {
+    "access_level": {
       "type": "string",
       "enum": [
-        "free",
+        "free_preview",
         "starter",
         "pro",
         "elite"
       ],
-      "default": "pro"
+      "default": "pro",
+      "description": "Minimum access level required"
     }
   },
   "required": [

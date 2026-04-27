@@ -1,22 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import HeroSection from '../components/home/HeroSection';
-import ProblemSolution from '../components/home/ProblemSolution';
-import CourseHighlight from '../components/home/CourseHighlight';
-import PreviewCards from '../components/home/PreviewCards';
+import ProblemSection from '../components/home/ProblemSection';
+import SolutionSection from '../components/home/SolutionSection';
 import ValueStack from '../components/home/ValueStack';
-import CredibilitySection from '../components/home/CredibilitySection';
-import CTASection from '../components/home/CTASection';
+import CourseHighlight from '../components/home/CourseHighlight';
+import FinalCTA from '../components/home/FinalCTA';
+import PaywallModal from '../components/shared/PaywallModal';
 
 export default function Home() {
+  const [paywallOpen, setPaywallOpen] = useState(false);
+
   return (
     <div>
-      <HeroSection />
-      <ProblemSolution />
-      <CourseHighlight />
-      <PreviewCards />
+      <HeroSection onCtaClick={() => setPaywallOpen(true)} />
+      <ProblemSection />
+      <SolutionSection />
       <ValueStack />
-      <CredibilitySection />
-      <CTASection />
+      <CourseHighlight />
+      <FinalCTA onCtaClick={() => setPaywallOpen(true)} />
+      <PaywallModal open={paywallOpen} onOpenChange={setPaywallOpen} />
     </div>
   );
 }

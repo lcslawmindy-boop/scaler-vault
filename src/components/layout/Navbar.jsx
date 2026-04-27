@@ -6,6 +6,7 @@ import { Menu, Zap, X, Lock } from 'lucide-react';
 
 const navLinks = [
   { label: 'Courses', path: '/courses' },
+  { label: 'Builds', path: '/vault' },
   { label: 'Pricing', path: '/pricing' },
   { label: 'Dashboard', path: '/dashboard' },
 ];

@@ -88,17 +88,21 @@
       "type": "boolean",
       "default": true
     },
-    "course_tier_required": {
+    "access_level": {
       "type": "string",
       "enum": [
-        "free",
+        "free_preview",
         "starter",
         "pro",
-        "elite",
-        "purchase"
+        "elite"
       ],
-      "default": "purchase",
-      "description": "Minimum membership tier to access course"
+      "default": "pro",
+      "description": "Minimum access level required"
+    },
+    "free_module_count": {
+      "type": "number",
+      "default": 1,
+      "description": "Number of modules visible as free preview"
     }
   },
   "required": [
