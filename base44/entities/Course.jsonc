@@ -88,7 +88,7 @@
       "type": "boolean",
       "default": true
     },
-    "tier_required": {
+    "course_tier_required": {
       "type": "string",
       "enum": [
         "free",
@@ -97,7 +97,8 @@
         "elite",
         "purchase"
       ],
-      "default": "purchase"
+      "default": "purchase",
+      "description": "Minimum membership tier to access course"
     }
   },
   "required": [
