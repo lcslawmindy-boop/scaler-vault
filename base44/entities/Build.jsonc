@@ -1,0 +1,98 @@
+{
+  "name": "Build",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Build plan title"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL-friendly slug"
+    },
+    "short_description": {
+      "type": "string",
+      "description": "One-line description"
+    },
+    "description": {
+      "type": "string",
+      "description": "Full build description"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "energy_systems",
+        "bio_signal_systems",
+        "communication_systems",
+        "demonstration_builds"
+      ],
+      "description": "Build category"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ],
+      "default": "intermediate"
+    },
+    "estimated_hours": {
+      "type": "number",
+      "description": "Estimated build time in hours"
+    },
+    "components": {
+      "type": "array",
+      "description": "BOM list",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "number"
+          },
+          "cost_estimate": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "schematics_url": {
+      "type": "string",
+      "description": "URL to schematic files"
+    },
+    "code_url": {
+      "type": "string",
+      "description": "GitHub or code repository URL"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Build hero image URL"
+    },
+    "release_date": {
+      "type": "string",
+      "format": "date",
+      "description": "When this build was released"
+    },
+    "is_published": {
+      "type": "boolean",
+      "default": false
+    },
+    "tier_required": {
+      "type": "string",
+      "enum": [
+        "free",
+        "starter",
+        "pro",
+        "elite"
+      ],
+      "default": "pro"
+    }
+  },
+  "required": [
+    "title",
+    "category"
+  ]
+}
