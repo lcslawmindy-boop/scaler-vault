@@ -24,6 +24,7 @@ import Courses from './pages/Courses';
 import CourseDetail from './pages/CourseDetail';
 import CheckoutSuccess from './pages/CheckoutSuccess';
 import Marketplace from './pages/Marketplace';
+import AdminVault from './pages/AdminVault';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -65,6 +66,7 @@ const AuthenticatedApp = () => {
         <Route path="/courses" element={<Courses />} />
         <Route path="/courses/:slug" element={<CourseDetail />} />
         <Route path="/marketplace" element={<Marketplace />} />
+        <Route path="/admin-vault" element={<AdminVault />} />
         <Route path="/success" element={<CheckoutSuccess />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
